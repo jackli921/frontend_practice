@@ -1,38 +1,36 @@
 import { Card } from "@/app/ui/components/Card";
 import { Profile } from "@/definitions/definitions";
-import path from "path";
-import {promises as fs} from "fs";
+import { ProfileSchema } from "@/schemas/profiles";
 
+export default async function Home() {
+  // const profiles = await getProfiles();
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/profiles.json`, {
+      cache: "force-cache",
+    });
+    if (!res.ok) {
+      throw new Error(
+        `Failed to fetch profiles.json: ${res.status} ${res.statusText}`
+      );
+    }
+    const raw: unknown = await res.json();
+    const profiles = ProfileSchema.array().parse(raw);
 
-async function getProfiles(): Promise<Profile[]> {
-  try{
-    const filePath = path.join(
-      process.cwd(),
-      "src",
-      "app",
-      "data",
-      "profiles.json"
-    );
-    const fileContents = await fs.readFile(filePath, "utf8");
-    const profiles: Profile[] = JSON.parse(fileContents);
-    return profiles;
-  }
-  catch(error){
-    console.error("Error reading profiles:", error);
-    return [];
-  }
-}
-
-export default async function Home(){
-  const profiles = await getProfiles();
-
-  return (
-    <div>
-      <div className="flex flex-col items-center justify-center">
-        {profiles.map((profile: Profile) => (
-          <Card key={profile.id} profile={profile} />
-        ))}
+    return (
+      <div>
+        <div className="flex flex-col items-center justify-center">
+          {profiles.map((profile: Profile) => (
+            <Card key={profile.id} profile={profile} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } catch (error) {
+    console.error("Error loading profiles:", error);
+    if (error instanceof Error) {
+      return <div>Error loading profiles: {error.message}</div>;
+    }
+    return <div>Unknown error occurred</div>;
+  }
 }
