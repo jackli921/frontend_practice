@@ -1,4 +1,4 @@
-export interface SocialLinks {
+export interface SocialLink {
   platform: string;
   url: string;
 }
@@ -10,10 +10,5 @@ export interface Profile {
   city: string;
   country: string;
   bio: string;
-  socialLinks: SocialLinks[];
-}
-
-export interface Links {
-  platform: string,
-  url: string
+  socialLinks: SocialLink[];
 }

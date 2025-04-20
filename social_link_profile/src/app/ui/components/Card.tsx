@@ -2,7 +2,7 @@
 import styles from "./Card.module.css"; // Make sure the path is correct
 import { Profile } from "@/definitions/definitions"
 import { ReactNode } from "react";
-import { LinkButton } from "./LinkButtons"
+import { LinkButton } from "./LinkButton"
 import Image from 'next/image'
 
 interface CardProps {
@@ -30,7 +30,7 @@ export function Card( { profile }: CardProps) : ReactNode {
       <p className={"text-gray-200"}>{profile.bio}</p>
       <div className="min-w-80">
         {profile.socialLinks.map((social) => (
-          <LinkButton key={social.url} Links={social} />
+          <LinkButton key={social.url} socialLink={social} />
         ))}
       </div>
     </div>
