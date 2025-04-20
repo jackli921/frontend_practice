@@ -1,0 +1,76 @@
+[
+  {
+    "id":1,
+    "fullName": "Jessica Randall",
+    "profileUrl": "https://randomuser.me/api/portraits/women/43.jpg",
+    "city": "London",
+    "country": "United Kingdom",
+    "bio": "Front-end developer and avid reader.",
+    "socialLinks": [
+      {
+        "platform": "GitHub",
+      "url": "https://github.com/jessicarandall"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/jessicarandall"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/jessicarandall"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/jessicarandall"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fullName": "John Smith",
+    "profileUrl": "https://randomuser.me/api/portraits/men/22.jpg",
+    "city": "New York",
+    "country": "USA",
+    "bio": "UX/UI Designer focused on accessibility.",
+    "socialLinks": [
+      {
+        "platform": "Behance",
+        "url": "https://behance.net/johnsmithdesigns"
+      },
+      {
+        "platform": "Dribbble",
+        "url": "https://dribbble.com/johnsmithportfolio"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/johnsmith"
+      },
+      {
+        "platform": "Website",
+        "url": "https://johnsmith.example.com"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "fullName": "Maria Garcia",
+    "profileUrl": "https://randomuser.me/api/portraits/women/17.jpg",
+    "city": "Madrid",
+    "country": "Spain",
+    "bio": "Data Scientist and tech blogger.",
+    "socialLinks": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/mariagarciads"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/mariagarcia_tech"
+      },
+      {
+        "platform": "Medium",
+        "url": "https://medium.com/@mariagarcia_data"
+      }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+/* components/Card.module.css */
+
+/* Text Colors */
+.textCustomGreen {
+    color: hsl(75, 94%, 57%);
+}
+
+.textCustomWhite {
+    color: hsl(0, 0%, 100%);
+}
+
+.textGrey700 {
+    color: hsl(0, 0%, 20%);
+}
+
+.textGrey800 {
+    color: hsl(0, 0%, 12%);
+}
+
+.textGrey900 {
+    color: hsl(0, 0%, 8%);
+}
+
+
+/* Background Colors */
+.bgCustomGreen {
+    background-color: hsl(75, 94%, 57%);
+}
+
+.hoverEffect:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 12%);
+    cursor:pointer;
+}
+
+.bgCustomWhite {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.bgGrey700 {
+    background-color: hsl(0, 0%, 20%);
+}
+
+.bgGrey800 {
+    background-color: hsl(0, 0%, 12%);
+}
+
+.bgGrey900 {
+    background-color: hsl(0, 0%, 8%);
+}
+
+/* You can also define classes that combine properties or are specific to elements */
+.cardContainer {
+    background-color: hsl(0, 0%, 12%);
+    /* Example using bgGrey800 */
+    padding: 1.5rem;
+    /* Example of spacing, but usually better with Tailwind */
+    border-radius: 0.5rem;
+    /* Example of border radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Example shadow */
+}
+
+.cardTitle {
+    color: hsl(75, 94%, 57%);
+    /* Example using textCustomGreen */
+    font-size: 1.25rem;
+    /* Example font size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    /* Example margin */
+}
+
+/* etc. */
